@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
 const { randomBytes } = require("crypto");
 
@@ -7,6 +8,7 @@ const commentsByPostId = {};
 
 app.use(express.json());
 app.use(express.urlencoded());
+app.use(cors());
 
 app.get("/posts/:id/comments", (req, res) => {
   res.send(commentsByPostId[req.params.id] || []);
