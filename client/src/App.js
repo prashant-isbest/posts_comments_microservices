@@ -1,7 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
+import PostCreate from "./PostCreate";
 
-export default class App extends Component {
-  render() {
-    return <div>I am a div</div>;
-  }
+export default function App() {
+  return (
+    <div>
+      <PostCreate />
+    </div>
+  );
 }
